@@ -1,11 +1,12 @@
-pragma ^0.4.2;
+pragma solidity ^0.4.19;
 /**
  * The contractName contract does this and that...
  */
 
-string public name; 
+ 
 contract IDMS {
+	uint name;
 	constructor() public {	
-			name = "Ameya";
+			name = 50;
 	}	
 }

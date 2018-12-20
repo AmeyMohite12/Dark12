@@ -10,7 +10,14 @@ contract IDMS {
 	struct StudentProfile{
 		string StudentName;
 		uint Age;
-		//uint CGPA;
+		uint256 birth_date;
+		uint CGPA;
+		string Institute;
+		uint256 Contact;		
+
+		 
+
+
 
 	}
 
@@ -21,17 +28,27 @@ contract IDMS {
 	constructor () public {	
 		addStudent("Amy",21);
 		addStudent("Adams",22);
-			
 	}
+
 
 	function addStudent(string _name, uint _age) public
 	{
 		StudentCount++;
-		StudentId[StudentCount] = StudentProfile(_name,_age);
+		//StudentId[StudentCount] = StudentProfile(_name,_age);
 	}
 
+
+	
+
+
+
+
+
+
+
+	// getter functions
 	function getName() public view returns(string){
-		return StudentId[0].StudentName;
+		return StudentId[1].StudentName;
 
 	}
 }
